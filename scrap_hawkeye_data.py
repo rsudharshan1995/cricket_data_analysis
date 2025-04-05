@@ -139,12 +139,9 @@ def parse_data_and_add_to_csv(output_file_path, inning, over, ball, hawkID):
         #print('file appended')
 
 if __name__ == "__main__":
-    output_file_path = 'Match08_CSKvsRCB.csv'
-    innings = 0
-    over = 0
-    ball = 0
-    hawkID = 13387642343991
+    output_file_path = 'yourfile.csv'
+    hawkID = 00000 #fill the match ID for which you would like to extract data
     for innings in range(1,3):
         for over in range(1,21):
-            for ball in range(1,10):
+            for ball in range(1,10):   #ball range is kept till 10 here to account for extras. You can increase this in case, a particular over in a match has more than 3 extras
                 parse_data_and_add_to_csv(output_file_path, innings, over, ball, hawkID)
